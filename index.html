@@ -32,18 +32,58 @@
             text-decoration: none;
             font-size: 18px;
         }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .contact-info img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .contact-info a {
+            display: flex;
+            align-items: center;
+            color: #F4EBD9;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .address {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <img src="img//lo.png" style="width: 600px; height: auto;">
+    <img src="img/lo.png" alt="Logo" style="width: 200px; height: auto;">
     <h1>MP Statistical Consulting</h1>
     <div class="nav-links">
-        <a href="./servicios">Servicios</a>
+        <a href="./servicios.html">Servicios</a>
         <span>|</span>
-        <a href="./portafolio">Portafolio</a> 
+        <a href="./portafolio.html">Portafolio</a> 
+    </div>
+
+    <div class="contact-info">
+        <a href="mailto:tu_correo@ejemplo.com">
+            <img src="img/email.png" alt="Correo electrónico" style="filter: invert(1);">
+            mpstatistical@gmail.com.co
+        </a>
+        <a href="https://wa.me/tu_numero_de_telefono">
+            <img src="img/whatsapp.png" alt="WhatsApp" style="filter: invert(1);">
+            +57 312 654 28 22
+        </a>
+    </div>
+
+    <div class="address">
+        <img src="img/location.png" style="width: 30px; height: 30px; margin-right: 10px;">
+        Manizales
     </div>
 </body>
 </html>
+
 
 
 
