@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MP Statistical Consulting</title>
+    <title>Portafolio</title>
     <style>
         body {
             background-color: #0F0D0E;
@@ -17,31 +17,72 @@
         h1 {
             color: #F4EBD9;
             text-align: center;
-            font-size: 32px;
+            font-size: 28px;
             margin-bottom: 20px;
         }
-        .nav-links {
+        .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
+            justify-content: space-between;
+            margin-top: 20px;
         }
-        .nav-links a {
-            color: #F4EBD9;
-            margin: 0 10px;
-            text-decoration: none;
+        .column {
+            width: 30%;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .back-button {
             font-size: 18px;
+            color: #F4EBD9;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #F4EBD9;
+        }
+        p {
+            text-align: justify;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <img src="img//lo.png" style="width: 1080px; height: 480px;">
-    <h1>MP Statistical Consulting</h1>
-    <div class="nav-links">
-        <a href="servicios.html">Servicios</a>
-        <span>|</span>
-        <a href="portafolio.html">Portafolio</a> 
+    <h1>Portafolio</h1>
+    <div class="container">
+        <div class="column">
+            <h2>Aprendizaje Automático</h2>
+            <ul>
+                <li><a href="https://mpstatistical-redes-apli-p5oftv.streamlit.app/">Aplicación interactiva de redes neuronales </a></li>
+                
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Análisis Estadístico</h2>
+            <ul>
+                <li><a href="https://mpstatistical-proyectos-reglin-b852bb.streamlit.app/">Aplicación interactiva de Regresión lineal simple </a></li>
+                <li><a href="https://drive.google.com/file/d/1O40dnDdJOrzgdULGn4CF7T3gc-VzgvfE/view?usp=sharing">Modelo de regresión lineal para identificar factores que afectan las emisiones de CO2 según características de los vehiculos</a></li>
+            
+            </ul>
+        </div>
+        <div class="column">
+            <h2>Computación Científica</h2>
+            <ul>
+                <li><a href="https://github.com/MPStatistical/proyectos">Simulación Estocástica de un gas ideal</a></li>
+                <li><a href="https://github.com/MPStatistical/proyectos">Simulación de la distribución uniforme discreta</a></li>
+                <li><a href="https://github.com/MPStatistical/proyectos">Optimización Estocástica de una función en varias variables</a></li>
+            </ul>
+        </div>
     </div>
+
+    <div class="back-button" onclick="goBack()">&#8592; Volver atrás</div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
 
