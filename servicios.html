@@ -32,12 +32,26 @@
             list-style-type: disc;
             padding-left: 20px;
         }
-        .back-button {
-            font-size: 18px;
-            color: #F4EBD9;
-            cursor: pointer;
-            margin-top: 20px;
+        ul li {
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
         }
+        ul li:hover {
+            transform: scale(1.05);
+        }
+        .back-button {
+           font-size: 24px;
+           background-color: #333;
+           color: #F4EBD9;
+           cursor: pointer;
+           padding: 10px;
+           border-radius: 50%;
+           display: inline-block;
+           transition: transform 0.3s ease;
+           }
+       .back-button:hover {
+           transform: scale(1.2);
+    }
         p {
             text-align: justify;
             margin-bottom: 10px;
@@ -70,7 +84,7 @@
         </div>
     </div>
 
-    <div class="back-button" onclick="goBack()">&#8592; Volver atrás</div>
+    <div class="back-button" onclick="goBack()">&#8592</div>
 
     <script>
         function goBack() {
@@ -79,6 +93,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 
