@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            background-color: #0F0D0E;
+            font-family: "Arial", sans-serif;
+            color: #F4EBD9;
+            margin: 0;
+        }
+        .dashboard-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dashboard-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .back-button {
+            font-size: 18px;
+            color: #F4EBD9;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <iframe title="Report Section" width="950" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiY2E2YjhkZmEtNWViYS00MmViLTk0YTItZWJjMjFmYWRiOWQwIiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+
+    <div class="back-button" onclick="goBack()">&#8592; Volver al Portafolio</div>
+
+    <script>
+        function goBack() {
+            window.location.href = "portafolio.html";
+        }
+    </script>
+</body>
+</html>
