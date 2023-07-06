@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MP Statistical Consulting</title>
+    <meta charset="UTF-8"> <!-- Agregado: Metaetiqueta para la codificación de caracteres -->
+    <title>Miguel Pardo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #0F0D0E;
-            font-family: "Arial", sans-serif;
+            font-family: "Roboto", sans-serif;
             color: #F4EBD9;
             display: flex;
             flex-direction: column;
@@ -13,12 +15,21 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            animation: fadeIn 2s ease;
         }
         h1 {
             color: #F4EBD9;
             text-align: center;
-            font-size: 32px;
+            font-size: 48px;
+            margin-bottom: 10px;
+            animation: fadeInDown 2s ease;
+        }
+        h2 {
+            color: #F4EBD9;
+            text-align: center;
+            font-size: 24px;
             margin-bottom: 20px;
+            animation: fadeInUp 2s ease;
         }
         .nav-links {
             display: flex;
@@ -31,12 +42,16 @@
             margin: 0 10px;
             text-decoration: none;
             font-size: 18px;
+            transition: transform 0.3s ease; /* Agregado: Transición para el efecto de zoom */
+        }
+        .nav-links a:hover {
+            transform: scale(1.2); /* Agregado: Zoom al pasar el mouse por encima */
         }
         .contact-info {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         .contact-info img {
             width: 30px;
@@ -52,7 +67,7 @@
             margin-right: 20px;
         }
         .address {
-            margin-top: 20px;
+            margin-top: 60px;
             display: flex;
             align-items: center;
             font-size: 16px;
@@ -62,11 +77,40 @@
             height: 30px;
             margin-right: 10px;
         }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
     <img src="img/lo.png" alt="Logo" style="width: 200px; height: auto;">
-    <h1>MP Statistical Consulting</h1>
+    <h1>Miguel Pardo</h1>
+    <h2>Analista y Científico de Datos</h2>
     <div class="nav-links">
         <a href="./servicios.html">Servicios</a>
         <span>|</span>
@@ -74,7 +118,7 @@
     </div>
 
     <div class="contact-info">
-        <a href="mailto:mpstatistical@gmail.com.co">
+        <a href="mailto:mpstatistical@gmail.com">
             <img src="img/email.png" alt="Correo electrónico">
             mpstatistical@gmail.com
         </a>
