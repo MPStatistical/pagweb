@@ -13,7 +13,7 @@
             display: flex;
             justify-content: space-between;
             padding: 20px;
-            align-items: center; /* Agregado: Centrar verticalmente los elementos */
+            align-items: flex-start; /* Modificado: Alinear al principio */
         }
         .column {
             width: 30%;
@@ -40,7 +40,6 @@
             padding-left: 20px;
         }
         ul li {
-            display: inline-block;
             margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
@@ -65,7 +64,7 @@
             transform: scale(1.2);
         }
         .back-button-container {
-            flex: 1; /* Agregado: Ocupar todo el espacio disponible */
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -76,17 +75,18 @@
     <h1>Portafolio</h1>
     <div class="container">
         <div class="column">
-            <h2>Aprendizaje Automático</h2>
+            <h2 style="text-align: left;">Aprendizaje Automático</h2>
             <ul>
                 <li><a href="https://mpstatistical-redes-apli-p5oftv.streamlit.app/">Aplicación interactiva de redes neuronales</a></li>
             </ul>
         </div>
         <div class="column">
-            <h2>Análisis Estadístico</h2>
+            <h2>Análisis y visualización de datos</h2>
             <ul>
                 <li><a href="https://mpstatistical-proyectos-reglin-b852bb.streamlit.app/">Aplicación interactiva de Regresión lineal simple</a></li>
                 <li><a href="https://drive.google.com/file/d/1O40dnDdJOrzgdULGn4CF7T3gc-VzgvfE/view?usp=sharing">Modelo de regresión lineal para identificar factores que afectan las emisiones de CO2 según características de los vehículos</a></li>
                 <li><a href="dashboard.html">Customer Analysis Dashboard</a></li>
+                <li><a href="dashboardHR.html">Human Resources Dashboard</a></li>
             </ul>
         </div>
         <div class="column">
@@ -109,7 +109,7 @@
         }
     </script>
 </body>
-</html>
+
 
 
 
