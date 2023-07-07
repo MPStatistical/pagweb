@@ -2,34 +2,44 @@
 <html>
 <head>
     <title>Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #0F0D0E;
-            font-family: "Arial", sans-serif;
+            background-color: #212121;
+            font-family: "Roboto", sans-serif;
             color: #F4EBD9;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
         .container {
             display: flex;
             justify-content: space-between;
             padding: 20px;
-            align-items: flex-start; /* Modificado: Alinear al principio */
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
         }
         .column {
             width: 30%;
             padding: 0 10px;
         }
         h1 {
-            color: #F4EBD9;
+            color: #FFFFFF;
             text-align: center;
             font-size: 28px;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000000;
         }
         h2 {
-            color: #F4EBD9;
+            color: #FFFFFF;
             font-size: 22px;
             margin-bottom: 10px;
             animation: fadeIn 2s;
+            text-shadow: 1px 1px 3px #000000;
         }
         @keyframes fadeIn {
             0% {opacity: 0;}
@@ -40,34 +50,36 @@
             padding-left: 20px;
         }
         ul li {
+            color: #FFFFFF;
             margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
         ul li a {
-            color: #F4EBD9;
+            color: #FFFFFF;
             text-decoration: none;
         }
         ul li:hover {
             transform: scale(1.05);
         }
         .back-button {
-            font-size: 24px;
-            background-color: #333;
-            color: #F4EBD9;
+            font-size: 36px;
+            background: none;
+            border: none;
             cursor: pointer;
             padding: 10px;
-            border-radius: 50%;
-            display: inline-block;
-            transition: transform 0.3s ease;
+            color: #FFFFFF;
+            transition: transform 0.3s ease, color 0.3s ease;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
         .back-button:hover {
+            color: #CCCCCC;
             transform: scale(1.2);
         }
         .back-button-container {
-            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -75,7 +87,7 @@
     <h1>Portafolio</h1>
     <div class="container">
         <div class="column">
-            <h2 style="text-align: left;">Aprendizaje Automático</h2>
+            <h2>Aprendizaje Automático</h2>
             <ul>
                 <li><a href="https://mpstatistical-redes-apli-p5oftv.streamlit.app/">Aplicación interactiva de redes neuronales</a></li>
             </ul>
@@ -92,23 +104,23 @@
         <div class="column">
             <h2>Computación Científica</h2>
             <ul>
-                <li><a href="https://github.com/MPStatistical/proyectos">Simulación Estocástica de ungas ideal</a></li>
+                <li><a href="https://github.com/MPStatistical/proyectos">Simulación Estocástica de un gas ideal</a></li>
                 <li><a href="https://github.com/MPStatistical/proyectos">Simulación de la distribución uniforme discreta</a></li>
                 <li><a href="https://github.com/MPStatistical/proyectos">Optimización Estocástica de una función en varias variables</a></li>
             </ul>
         </div>
     </div>
-
     <div class="back-button-container">
-        <div class="back-button" onclick="goBack()">&#8592;</div>
+        <button class="back-button" onclick="goBack()">&#10229;</button>
     </div>
-
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
 </body>
+</html>
+
 
 
 
