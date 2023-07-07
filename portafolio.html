@@ -81,6 +81,22 @@
             align-items: center;
             margin-top: 20px;
         }
+
+        /* Estilos específicos para dispositivos móviles */
+        @media only screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -120,6 +136,7 @@
     </script>
 </body>
 </html>
+
 
 
 
