@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"> <!-- Agregado: Metaetiqueta para la codificación de caracteres -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Pardo</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            background-color: #0F0D0E;
+            background-color: #212121;
             font-family: "Roboto", sans-serif;
-            color: #F4EBD9;
+            color: #FFFFFF;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 20px;
             animation: fadeIn 2s ease;
         }
         h1 {
-            color: #F4EBD9;
+            color: #0F4C81;
             text-align: center;
-            font-size: 48px;
+            font-size: 36px;
             margin-bottom: 10px;
             animation: fadeInDown 2s ease;
+            text-shadow: 2px 2px 4px #000000;
         }
         h2 {
-            color: #F4EBD9;
+            color: #FFFFFF;
             text-align: center;
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 20px;
             animation: fadeInUp 2s ease;
+            text-shadow: 1px 1px 3px #000000;
         }
         .nav-links {
             display: flex;
@@ -38,43 +43,52 @@
             margin-top: 10px;
         }
         .nav-links a {
-            color: #F4EBD9;
+            color: #0F4C81;
             margin: 0 10px;
             text-decoration: none;
-            font-size: 18px;
-            transition: transform 0.3s ease; /* Agregado: Transición para el efecto de zoom */
+            font-size: 16px;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
         }
         .nav-links a:hover {
-            transform: scale(1.2); /* Agregado: Zoom al pasar el mouse por encima */
+            transform: scale(1.2);
+        }
+        .nav-links i {
+            margin-right: 5px;
         }
         .contact-info {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 40px;
+            margin-top: 30px;
         }
         .contact-info img {
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        .contact-info img:hover {
+            transform: scale(1.2);
         }
         .contact-info a {
             display: flex;
             align-items: center;
-            color: #F4EBD9;
+            color: #FFFFFF;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             margin-right: 20px;
         }
         .address {
-            margin-top: 60px;
+            margin-top: 40px;
             display: flex;
             align-items: center;
-            font-size: 16px;
+            font-size: 14px;
         }
         .address img {
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             margin-right: 10px;
         }
         @keyframes fadeIn {
@@ -105,16 +119,60 @@
                 transform: translateY(0);
             }
         }
+        .logo-container {
+            opacity: 0;
+            animation: fadeInLogo 2s ease forwards;
+        }
+        @keyframes fadeInLogo {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Ajustar tamaño del logo */
+        .logo-container img {
+            width: 350px;
+            height: auto;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            .nav-links a {
+                font-size: 14px;
+            }
+            .contact-info img {
+                width: 18px;
+                height: 18px;
+            }
+            .contact-info a {
+                font-size: 12px;
+            }
+            .address {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="img/lo.png" alt="Logo" style="width: 200px; height: auto;">
+    <div class="logo-container">
+        <img src="img/lo.png" alt="Logo" class="logo">
+    </div>
     <h1>Miguel Pardo</h1>
     <h2>Analista y Científico de Datos</h2>
     <div class="nav-links">
-        <a href="./servicios.html">Servicios</a>
-        <span>|</span>
-        <a href="./portafolio.html">Portafolio</a> 
+        <a href="./servicios.html"><i class="fas fa-briefcase"></i> Servicios</a>
+        <span style="color: #FFFFFF; margin: 0 10px;">|</span>
+        <a href="./portafolio.html"><i class="fas fa-folder-open"></i> Portafolio</a>
     </div>
 
     <div class="contact-info">
@@ -131,9 +189,10 @@
     <div class="address">
         <img src="img/location.png" alt="Dirección">
         <span>Manizales</span>
-    </div>
-</body>
+    </div</body>
 </html>
+
+
 
 
 
