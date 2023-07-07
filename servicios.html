@@ -2,59 +2,80 @@
 <html>
 <head>
     <title>Servicios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #0F0D0E;
-            font-family: "Arial", sans-serif;
+            background-color: #212121;
+            font-family: "Roboto", sans-serif;
             color: #F4EBD9;
+            margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            color: #F4EBD9;
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 20px;
+            padding: 20px;
         }
         .container {
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            padding: 20px;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
         }
         .column {
             width: 45%;
+            padding: 0 10px;
+        }
+        h1 {
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        h2 {
+            color: #FFFFFF;
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px #000000;
         }
         ul {
             list-style-type: disc;
             padding-left: 20px;
         }
         ul li {
+            color: #FFFFFF;
             margin-bottom: 10px;
             transition: transform 0.3s ease;
         }
+        ul li p {
+            text-align: justify;
+            margin: 0;
+        }
+        /* Efecto de zoom */
         ul li:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
         .back-button {
-           font-size: 24px;
-           background-color: #333;
-           color: #F4EBD9;
-           cursor: pointer;
-           padding: 10px;
-           border-radius: 50%;
-           display: inline-block;
-           transition: transform 0.3s ease;
-           }
-       .back-button:hover {
-           transform: scale(1.2);
-    }
-        p {
-            text-align: justify;
-            margin-bottom: 10px;
+            font-size: 36px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            color: #FFFFFF;
+            transition: transform 0.3s ease, color 0.3s ease;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .back-button:hover {
+            color: #CCCCCC;
+            transform: scale(1.2);
+        }
+        .back-button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -83,9 +104,9 @@
             </ul>
         </div>
     </div>
-
-    <div class="back-button" onclick="goBack()">&#8592</div>
-
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()">&#10229;</button>
+    </div>
     <script>
         function goBack() {
             window.history.back();
