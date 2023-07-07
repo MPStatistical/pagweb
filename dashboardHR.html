@@ -11,7 +11,7 @@
         }
         .dashboard-container {
             width: 100%;
-            height: 100vh;
+            height: calc(100vh - 60px);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,12 +21,25 @@
             height: 100%;
             border: none;
         }
+        .back-button-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         .back-button {
-            font-size: 18px;
-            color: #F4EBD9;
+            font-size: 24px;
+            background: none;
+            border: none;
             cursor: pointer;
-            margin-top: 20px;
-            text-align: center;
+            padding: 10px;
+            color: #FFFFFF;
+            transition: transform 0.3s ease, color 0.3s ease;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .back-button:hover {
+            color: #CCCCCC;
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -34,8 +47,9 @@
     <div class="dashboard-container">
         <iframe title="Report Section" width="950" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiY2E2YjhkZmEtNWViYS00MmViLTk0YTItZWJjMjFmYWRiOWQwIiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
     </div>
-
-    <div class="back-button" onclick="goBack()">&#8592; Volver al Portafolio</div>
+    <div class="back-button-container">
+        <button class="back-button" onclick="goBack()">&#10229</button>
+    </div>
 
     <script>
         function goBack() {
